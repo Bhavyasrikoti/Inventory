@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Shop Inventory</title>
+    <link rel="stylesheet" href="/Inventory/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <!-- Same sidebar as index.html -->
+        </aside>
+
+        <main class="main-content">
+            <h1>Add Product</h1>
+            
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-no">Product No</label>
+                    <input type="text" id="product-no" value="1" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input type="text" id="product-name" placeholder="Mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Enter Price</label>
+                    <input type="number" id="price" placeholder="25000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stock">Enter Stock</label>
+                    <input type="number" id="stock" placeholder="20" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn">Add</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+   <script src="/Inventory/js/products.js"></script>
+</body>
+</html>

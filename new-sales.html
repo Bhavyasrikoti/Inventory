@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Sale - Shop Inventory</title>
+    <link rel="stylesheet" href="/Inventory/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Shop Inventory Management</h2>
+            <nav>
+                <h3>Manage Products</h3>
+                <ul>
+                    <li><a href="add-product.html">Add Product</a></li>
+                    <li><a href="my-products.html">My Products</a></li>
+                </ul>
+                
+                <h3>Manage Sales</h3>
+                <ul>
+                    <li><a href="new-sales.html" class="active">New Sales</a></li>
+                    <li><a href="view-sales.html">View Sales</a></li>
+                </ul>
+                
+                <h3>Manage Account</h3>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>New Sales</h1>
+            
+            <div class="sales-form">
+                <section class="customer-details">
+                    <h2>Customer Details</h2>
+                    <form id="customer-form">
+                        <div class="form-group">
+                            <label for="customer-name">Customer Name</label>
+                            <input type="text" id="customer-name" placeholder="Type here" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-email">Customer Email</label>
+                            <input type="email" id="customer-email" placeholder="Type here">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-contact">Customer Contact</label>
+                            <input type="tel" id="customer-contact" placeholder="Type here" required>
+                        </div>
+                    </form>
+                </section>
+                
+                <section class="order-details">
+                    <h2>Order Details</h2>
+                    <div class="form-group">
+                        <label for="select-product">Select Product</label>
+                        <select id="select-product" class="product-select">
+                            <option value="">Select Product</option>
+                            <!-- Products will be loaded by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="order-items">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Discount %</th>
+                                    <th>Subtotal</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="order-items">
+                                <!-- Order items will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <div class="summary-row">
+                            <span>Total Items:</span>
+                            <span id="total-items">0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Total Amount:</span>
+                            <span id="total-amount">₹0.00</span>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" id="complete-sale" class="btn">Complete Sale</button>
+                            <button type="button" class="btn btn-cancel">Cancel</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Logout Modal -->
+    <div id="logout-modal" class="modal">
+        <div class="modal-content">
+            <h3>Confirm Logout</h3>
+            <p>Are you sure you want to logout?</p>
+            <div class="modal-actions">
+                <button id="confirm-logout" class="btn btn-danger">OK</button>
+                <button id="cancel-logout" class="btn btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+   <script src="/Inventory/js/sales.js"></script>
+    <script src="/Inventory/js/products.js"></script>
+</body>
+</html>
